@@ -47,6 +47,7 @@ public class User implements Serializable {
 	private String pwdRecoveryToken;
 	@Column(name = "pwd_recovery_token_exp")
 	private String pwdRecoveryTokenExp;
+	
 	private List<String> roles;
 	
 	@Column(name = "created_at", insertable = false, updatable = false)
