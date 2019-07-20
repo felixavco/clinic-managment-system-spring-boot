@@ -7,7 +7,9 @@ import org.springframework.transaction.annotation.Transactional;
 
 import com.clinicmanagementsystem.api.models.dao.IClinicDao;
 import com.clinicmanagementsystem.api.models.entities.Clinic;
+import org.springframework.stereotype.Service;
 
+@Service
 public class ClinicService implements IClinicService {
 	
 	@Autowired

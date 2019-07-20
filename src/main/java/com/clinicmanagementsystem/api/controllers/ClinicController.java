@@ -27,6 +27,11 @@ public class ClinicController {
 	public void saveClinic(Clinic clinic) {
 		clinicService.save(clinic);
 	}
+        
+//        @GetMapping(name = "/test", produces = "application/json")
+//        public String testRoute(){
+//            return "This is a test route, if you see this is because is working";
+//        }
 	
 	
 }
