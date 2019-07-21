@@ -6,6 +6,7 @@
 package com.clinicmanagementsystem.api.models.entities;
 
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 import javax.persistence.Basic;
@@ -156,7 +157,10 @@ public class Clinic implements Serializable {
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "clinic", fetch = FetchType.LAZY)
     private List<User> userList;
 
-    public Clinic() {
+    //*********** Constructors **********************//
+	public Clinic() {
+		this.patientList = new ArrayList<Patient>();
+		this.userList = new ArrayList<User>();
     }
 
     public Clinic(Long id) {
@@ -168,7 +172,8 @@ public class Clinic implements Serializable {
         this.verificationToken = verificationToken;
         this.verificationTokenExp = verificationTokenExp;
     }
-
+    
+    //*********** Getters and Setters **********************//
     public Long getId() {
         return id;
     }

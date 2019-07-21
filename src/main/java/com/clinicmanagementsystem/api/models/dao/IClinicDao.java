@@ -6,4 +6,5 @@ import com.clinicmanagementsystem.api.models.entities.Clinic;
 
 public interface IClinicDao extends CrudRepository<Clinic, Long> {
 
+	public Clinic findByDomainIgnoreCase(String domain);
 }

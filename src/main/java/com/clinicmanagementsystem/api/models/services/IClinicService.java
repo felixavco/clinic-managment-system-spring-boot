@@ -14,4 +14,6 @@ public interface IClinicService {
 	
 	public void deleteById(Long id); 
 	
+	public Clinic findByDomain(String domain);
+	
 }

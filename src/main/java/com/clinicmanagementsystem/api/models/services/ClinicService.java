@@ -37,4 +37,9 @@ public class ClinicService implements IClinicService {
 		clinicDao.deleteById(id);
 	}
 
+	@Override
+	public Clinic findByDomain(String domain) {
+		return clinicDao.findByDomainIgnoreCase(domain);
+	}
+
 }
